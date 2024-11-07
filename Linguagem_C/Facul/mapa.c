@@ -26,7 +26,7 @@ void menuprincipal(){
     int opcao;
 
     printf("\n            MENU DE OPCOES           \n");
-    printf("\n 1 - Fazer Reserva.\n 2 - Listar Reserva.\n 3 - Total de Pessoas Por Dia.\n 4 - Sair.\n");
+    printf("\n 1 - Fazer Reserva.\n 2 - Listar Reservas.\n 3 - Total de Pessoas Por Dia.\n 4 - Sair.\n");
     printf("\n=====================================\n");
     printf("\nDigite o numero da opcao desejada: ");
     scanf("%d", &opcao);
@@ -56,7 +56,22 @@ void fazerreserva(){
     printf("\nDigite seu CPF: ");
     scanf("%s", reservas[numeroreserva].cpf);
 
-    int diasemana;
+    escolherdia();
+
+    printf("\nDigite a quantidade de pessoas que deseja reservar: ");
+    scanf("%d", &reservas[numeroreserva].qtdpessoas);
+
+    numeroreserva++;
+
+    printf("\n=====================================\n");
+    printf("\n    Reserva efetuada com sucesso!    \n");
+    printf("\n=====================================\n");
+
+    menuprincipal();
+}
+
+void escolherdia(){
+        int diasemana;
     printf("\n=====================================\n");
     printf("\n           DIAS DISPONIVEIS          \n");
     printf("\n 1 - Quinta\n 2 - Sexta\n 3 - Sabado\n 4 - Domingo\n");
@@ -80,20 +95,11 @@ void fazerreserva(){
         break;
     default:
         printf("Escolha uma opcao valida!\n");
+        escolherdia();
         break;
     }
-
-    printf("\nDigite a quantidade de pessoas que deseja reservar: ");
-    scanf("%d", &reservas[numeroreserva].qtdpessoas);
-
-    numeroreserva++;
-
-    printf("\n=====================================\n");
-    printf("\n    Reserva efetuada com sucesso!    \n");
-    printf("\n=====================================\n");
-
-    menuprincipal();
 }
+
 void listarreserva(){
     if(numeroreserva > 0){
         printf("=====================================\n");

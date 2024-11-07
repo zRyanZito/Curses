@@ -12,3 +12,4 @@ void menuprincipal();
 void fazerreserva();
 void listarreserva();
 void totalpessoas();
+void escolherdia();

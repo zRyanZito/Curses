@@ -79,31 +79,6 @@ void addpalavra(){
     }
 }
 
-// FUNÇÃO QUE PERGUNTA SE O USUÁRIO QUER JOGAR DE NOVO //
-// void reset(){
-
-//     int restart;
-
-//     printf("\nQuer jogar outra vez?\n");
-//     printf("(1) Sim (2) Nao: ");
-//     scanf("%d", &restart);
-
-//     switch(restart){
-//         case 1:
-//             system("cls");
-//             main();
-//             break;
-
-//         case 2:
-//             printf("\nOBRIGADO POR JOGAR!\n");
-//             break;
-
-//         default:
-//             printf("\nVoce precisa escolher uma opcao valida!\n");
-//             reset();
-//     }
-// }
-
 // FUNÇÃO QUE DEFINE A PALAVRA SECRETA //
 void definirpalavra(){
     FILE* f = fopen("../dados.txt", "r");

@@ -25,10 +25,10 @@ void cabecalho(){
 void menuprincipal(){
     int opcao;
 
-    printf("\n            MENU DE OPCOES           \n");
-    printf("\n 1 - Fazer Reserva.\n 2 - Listar Reservas.\n 3 - Total de Pessoas Por Dia.\n 4 - Sair.\n");
+    printf("\n            MENU PRINCIPAL           \n");
+    printf("\n 1 - Reservar.\n 2 - Listar reservas feitas.\n 3 - Consultar total de pessoas.\n 4 - Sair.\n");
     printf("\n=====================================\n");
-    printf("\nDigite o numero da opcao desejada: ");
+    printf("\nEscolha o que deseja fazer: ");
     scanf("%d", &opcao);
 
     system("cls");
@@ -71,12 +71,12 @@ void fazerreserva(){
 }
 
 void escolherdia(){
-        int diasemana;
+    int diasemana;
     printf("\n=====================================\n");
-    printf("\n           DIAS DISPONIVEIS          \n");
+    printf("\n          DIAS DE ATENDIMENTO        \n");
     printf("\n 1 - Quinta\n 2 - Sexta\n 3 - Sabado\n 4 - Domingo\n");
     printf("\n=====================================\n");
-    printf("\nEscolha um dia para a reserva: ");
+    printf("\nEscolha um dia para fazer sua reserva: ");
     scanf("%d", &diasemana);
 
     switch (diasemana)
@@ -94,7 +94,7 @@ void escolherdia(){
         strcpy(reservas[numeroreserva].dia, "Domingo");
         break;
     default:
-        printf("Escolha uma opcao valida!\n");
+        printf("\nEscolha uma opcao valida!\n");
         escolherdia();
         break;
     }
@@ -109,7 +109,7 @@ void listarreserva(){
         }
     } else {
         printf("=====================================\n");
-        printf("\n  Nao existem reservas no sistema   \n");
+        printf("\n  Nenhuma reserva foi cadastrada!   \n");
         printf("\n=====================================\n");
     }
 
@@ -147,7 +147,7 @@ void totalpessoas(){
         printf("\n=====================================\n");
     } else{
         printf("=====================================\n");
-        printf("\n  Nao existem reservas no sistema   \n");
+        printf("\n  Nenhuma reserva foi cadastrada!   \n");
         printf("\n=====================================\n");
     }
 

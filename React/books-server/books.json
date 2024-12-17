@@ -1,14 +1,34 @@
 [
     {
-        "id": "1",
-        "name": "Livro irado"
+      "id": "4",
+      "name": "Entendendo algoritmos"
     },
     {
-        "id": "2",
-        "name": "Livro testado"
+      "id": "5",
+      "name": "Cangaceiro Javascript"
     },
     {
-        "id": "3",
-        "name": "Livro de teste"
+      "id": "7",
+      "name": "Guia básico de C#"
+    },
+    {
+      "id": "8",
+      "name": "Guia básico de JavaScript"
+    },
+    {
+      "id": "9",
+      "name": "Código Limpo"
+    },
+    {
+      "id": "10",
+      "name": "JavaScript para iniciantes"
+    },
+    {
+      "id": "11",
+      "name": "Conhecendo o python"
+    },
+    {
+      "id": "12",
+      "name": "Imersão Alura"
     }
-]
+  ]

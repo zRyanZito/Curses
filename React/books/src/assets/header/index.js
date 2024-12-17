@@ -2,6 +2,7 @@ import Logo from '../logo/index.js';
 import HeaderOptions from './header-options/index.js';
 import HeaderIcons from './header-icons/index.js';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const HeaderContainer = styled.header`
     display: flex;
@@ -17,7 +18,9 @@ const HeaderContainer = styled.header`
 function Header(){
     return (
         <HeaderContainer>
-            <Logo/>
+            <Link to="/">
+                <Logo/>
+            </Link>
             <HeaderOptions/>
             <HeaderIcons/>
         </HeaderContainer>

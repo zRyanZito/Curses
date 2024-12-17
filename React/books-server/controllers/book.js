@@ -1,4 +1,4 @@
-const { getAllBooks, getBookId, insertBook, modifyBook, delBook } = require('../services/book');
+const { getAllBooks, getBookForId, insertBook, modifyBook, delBook } = require('../services/book');
 
 function getBooks(req, res) {
     try {
@@ -15,7 +15,7 @@ function getBook(req, res) {
         const id = req.params.id
         
         if(id && Number(id)){
-            const book = getBookId(id);
+            const book = getBookForId(id);
             res.send(book);
         } else{
             res.status(422)

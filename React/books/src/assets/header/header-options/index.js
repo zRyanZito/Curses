@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const List = styled.ul`
     display: flex;
@@ -21,8 +22,10 @@ function HeaderOptions() {
     return (
 
         <List>
-            {headerOptions.map((option) => (
-                <ListItems>{option}</ListItems>
+            {headerOptions.map((text) => (
+                <Link to={`/${text.toLowerCase()}`}>
+                    <ListItems>{text}</ListItems>
+                </Link>
             ))}
         </List>
 

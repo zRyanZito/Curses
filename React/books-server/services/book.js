@@ -4,7 +4,7 @@ function getAllBooks() {
     return JSON.parse(fs.readFileSync("books.json"))
 }
 
-function getBookId(id) {
+function getBookForId(id) {
     const books = getAllBooks()
 
     const filterbook = books.filter(book => book.id == id)[0]
@@ -40,4 +40,4 @@ function delBook(id) {
     fs.writeFileSync("books.json", JSON.stringify(filterBooks))
 }
 
-module.exports = { getAllBooks, getBookId, insertBook, modifyBook, delBook }
+module.exports = { getAllBooks, getBookForId, insertBook, modifyBook, delBook }
